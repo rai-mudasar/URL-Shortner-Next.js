@@ -12,7 +12,8 @@ export default function VerifyEmailPage() {
   const [token, setToken] = useState("");
 
   useEffect(() => {
-    setToken(SearchParams.get("token"));
+    const tokenValue = SearchParams.get("token");
+    setToken(tokenValue);
   }, [token]);
 
   const verify = async () => {
